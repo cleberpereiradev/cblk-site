@@ -1,0 +1,34 @@
+Projeto site pessoal
+
+Tecnologias utilizadas:
+    - Java
+    - Angular
+    - Docker
+    - PostgreSQL
+    - Tentar aprender TailwindCSS
+
+Escopo:
+    - Perfil profissional
+    - Perfil pessoal
+    - Projetos
+
+Exemplo de entidade/classe do Projeto
+
+Class: Profile
+    -String name
+    -Date birthdayDate
+    -String course
+    -String imgUrl
+    -String aboutText
+
+Conteúdos de cada seção
+    - Profissional: Perfil, descrição e definição das principais skills, metas e objetivos, recomendações de conteúdo para estudos.
+    - Pessoal: Perfil, descrição de hobbies, ambiente de games(listas de recomendações, listas de preferidos).
+    - Projetos: Lista de projetos organizados por Stack, links para o repositório, informações gerais do projeto.
+
+Rotas de Exemplo
+    -"/home": descrição, perfil, foto
+    -"/games": listas de jogos, recomendações
+    -"/games/:id": descrição completa do games
+    -"/projetos": lista de projetos
+    -"/conteudos": recomendações de conteudo
