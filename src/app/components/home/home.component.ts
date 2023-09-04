@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IProfile } from 'src/app/interfaces/IProfile';
+import { ProfileService } from 'src/app/services/profile.service';
 
 
 @Component({
@@ -8,10 +10,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  profiles: IProfile[] = [];
 
-  constructor() {}
+  constructor(private service: ProfileService) {}
 
   ngOnInit(): void {
+    this.service.showProfile().subscribe((result:IProfile[]) => {
+      this.profiles = result;
+    });
   }
 
 }

@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { GameComponent } from './pages/games/game/game.component';
 import { GamesComponent } from './pages/games/games/games.component';
+import { GameCardComponent } from './pages/games/game-card/game-card.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { GamesComponent } from './pages/games/games/games.component';
     FooterComponent,
     HomeComponent,
     GameComponent,
-    GamesComponent
+    GamesComponent,
+    GameCardComponent
   ],
   imports: [
     BrowserModule,
