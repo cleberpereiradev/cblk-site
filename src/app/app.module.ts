@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { GameComponent } from './pages/games/game/game.component';
 import { GamesComponent } from './pages/games/games/games.component';
 import { GameCardComponent } from './pages/games/game-card/game-card.component';
+import { GameListComponent } from './games/game-list/game-list.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { GameCardComponent } from './pages/games/game-card/game-card.component';
     HomeComponent,
     GameComponent,
     GamesComponent,
-    GameCardComponent
+    GameCardComponent,
+    GameListComponent
   ],
   imports: [
     BrowserModule,
