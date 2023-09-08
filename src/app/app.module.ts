@@ -12,6 +12,8 @@ import { GamesComponent } from './pages/games/games/games.component';
 import { GameCardComponent } from './pages/games/game-card/game-card.component';
 import { GameListComponent } from './pages/games/game-list/game-list.component';
 import { GameHeaderComponent } from './pages/games/game-header/game-header.component';
+import { ProfessionalInfoComponent } from './pages/professional/professional-info/professional-info.component';
+import { SkillsComponent } from './pages/professional/skills/skills.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { GameHeaderComponent } from './pages/games/game-header/game-header.compo
     GamesComponent,
     GameCardComponent,
     GameListComponent,
-    GameHeaderComponent
+    GameHeaderComponent,
+    ProfessionalInfoComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
