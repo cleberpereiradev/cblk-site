@@ -12,10 +12,10 @@ export class GameCardComponent implements OnInit {
   games :IGame[] = [];
 
   constructor(private service: GameService) {}
-
   ngOnInit(): void {
     this.service.listGames().subscribe((result:IGame[]) => {
       this.games = result;
     });
   }
+
 }

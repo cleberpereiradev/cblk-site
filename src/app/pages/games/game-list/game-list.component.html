@@ -1,17 +1,17 @@
-<section>
+<section class="flex justify-around">
     <table>
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Nome</th>
-                <th>Avaliação</th>
+                <th class="px-8 py-2">Posição</th>
+                <th class="px-8 py-2">Nome</th>
+                <th class="px-8 py-2">Avaliação</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Exemplo 1</td>
-                <td>Exemplo 2</td>
-                <td>Exemplo 3</td>
+            <tr *ngFor="let game of games; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ game.title }}</td>
+                <td>{{ game.rating }}</td>
             </tr>
         </tbody>
     </table>

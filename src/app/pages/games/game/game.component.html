@@ -1,7 +1,6 @@
 <app-game-header></app-game-header>
 <section>
-    <div class="flex flex-col mt-16">
-        
+    <div class="flex flex-col mt-16">   
     </div>
     <div class="grid grid-cols-2 mt-24 p-12">
         <div class="mx-auto">
@@ -10,8 +9,8 @@
             <p class="text-center">Horas jogadas: {{ game.hoursPlayed }} horas</p>
         </div>
         <div class="text-center">
-            <h2 class="text-6xl">{{ game.title }}</h2>
-            <h3 class="text-lg">{{ game.releaseDate }}</h3>
+            <h2 class="text-5xl">{{ game.title }}</h2>
+            <h3 class="text-lg">Lançamento: {{ game.releaseDate }}</h3>
             <p class="text-lg py-8">{{ game.fullDescription }}</p>
         </div>
     </div>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IGame } from 'src/app/interfaces/IGame';
 import { GameService } from 'src/app/services/game.service';
+import { format } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 
 @Component({
   selector: 'app-game',
@@ -13,19 +15,22 @@ export class GameComponent implements OnInit{
     id: 0,
     title :'',
     gameGenre: 1,
-    releaseDate: new Date,
+    releaseDate: '',
     gameImgUrl: '',
     shortDescription: '',
     fullDescription: '',
     hoursPlayed: 0,
     rating: 0
-  }
+  }  
+
   constructor(
     private service: GameService,
     private route: ActivatedRoute,
-    private router: Router) {}
-  
-  ngOnInit(): void {
+    private router: Router,
+    ) {}
+
+
+    ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.service.findById(parseInt(id!)).subscribe(game => {
       this.game = game;

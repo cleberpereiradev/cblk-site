@@ -18,5 +18,11 @@ export class GameService {
 
   findById(id: number): Observable<IGame> {
     return this.http.get<IGame>(`${this.api}/${this.endpoint}/${id}`);
-  } 
+  }
+
+  listTopGames(): Observable<IGame[]> {
+    this.endpoint = 'games/top-games';
+
+    return this.http.get<IGame[]>(`${this.api}/${this.endpoint}`);
+  }
 }
