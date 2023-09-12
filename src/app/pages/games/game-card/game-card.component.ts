@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { IGame } from 'src/app/interfaces/IGame';
 import { GameService } from 'src/app/services/game.service';
 
@@ -17,5 +18,4 @@ export class GameCardComponent implements OnInit {
       this.games = result;
     });
   }
-
 }

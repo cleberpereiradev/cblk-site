@@ -4,14 +4,14 @@
     </div>
     <div class="grid grid-cols-2 mt-24 p-12">
         <div class="mx-auto">
-            <img class="py-8" src="/assets/img/logo.png" alt="">
+            <img class="py-8 h-96" src="{{ game.gameImgUrl }}" alt="">
             <p class="text-center pt-8">Gênero: {{ game.gameGenre }} </p>
             <p class="text-center">Horas jogadas: {{ game.hoursPlayed }} horas</p>
         </div>
-        <div class="text-center">
+        <div class="flex flex-col text-center gap-8 py-8">
             <h2 class="text-5xl">{{ game.title }}</h2>
             <h3 class="text-lg">Lançamento: {{ game.releaseDate }}</h3>
-            <p class="text-lg py-8">{{ game.fullDescription }}</p>
+            <p class="text-base">{{ game.fullDescription }}</p>
         </div>
     </div>
 </section>

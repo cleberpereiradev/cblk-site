@@ -21,8 +21,7 @@ export class GameService {
   }
 
   listTopGames(): Observable<IGame[]> {
-    this.endpoint = 'games/top-games';
-
-    return this.http.get<IGame[]>(`${this.api}/${this.endpoint}`);
+    const topGamesEndpoint = 'top-games';
+    return this.http.get<IGame[]>(`${this.api}/${this.endpoint}/${topGamesEndpoint}`);
   }
 }
