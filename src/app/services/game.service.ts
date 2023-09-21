@@ -16,6 +16,11 @@ export class GameService {
     return this.http.get<IGame[]>(`${this.api}/${this.endpoint}`);
   }
 
+  recommendedGames(): Observable<IGame[]> {
+    const recommendedUri = 'recommended'
+    return this.http.get<IGame[]>(`${this.api}/${this.endpoint}/${recommendedUri}`);
+  }
+
   findById(id: number): Observable<IGame> {
     return this.http.get<IGame>(`${this.api}/${this.endpoint}/${id}`);
   }

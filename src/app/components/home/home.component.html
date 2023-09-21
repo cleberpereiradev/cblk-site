@@ -1,12 +1,12 @@
-<section class="grid grid-cols-2 my-56 mx-24">
+<section class="grid grid-cols-2 my-56 mx-24"  *ngFor="let profile of profiles">
     <div class="text-center">
-        <img class="h-80 rounded-full mx-auto" src="/assets/img/profile-img.jpg" alt="Imagem perfil Cleber Pereira">
+        <img class="h-80 rounded-full mx-auto" src="{{ profile.imgUrl }}" alt="Imagem perfil Cleber Pereira">
         <div class="text-center p-6 text-xl font-semibold mt-12">
             <a class="px-4 py-1 m-1 hover:text-zinc-300 border-2 border-slate-500 rounded-3xl bg-blue-950" href="https://github.com/cleberpereiradev" target="_blank">Github</a>
             <a class="px-4 py-1 m-1 hover:text-zinc-300 border-2 border-slate-500 rounded-3xl bg-blue-950" href="https://www.linkedin.com/in/cleber-pereira-9a5384235/" target="_blank">LinkedIn</a>
         </div>
     </div>
-    <div class="text-justify px-6" *ngFor="let profile of profiles">
+    <div class="text-justify px-6">
         <p class="text-center py-6 text-6xl">{{ profile.name }}</p>
         <p class="p-6">{{ profile.aboutText }}</p>
         <p class="p-6"><strong>Curso:</strong> {{ profile.course }}</p>

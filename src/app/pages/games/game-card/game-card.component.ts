@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { IGame } from 'src/app/interfaces/IGame';
 import { GameService } from 'src/app/services/game.service';
 
@@ -14,7 +13,7 @@ export class GameCardComponent implements OnInit {
 
   constructor(private service: GameService) {}
   ngOnInit(): void {
-    this.service.listGames().subscribe((result:IGame[]) => {
+    this.service.recommendedGames().subscribe((result:IGame[]) => {
       this.games = result;
     });
   }

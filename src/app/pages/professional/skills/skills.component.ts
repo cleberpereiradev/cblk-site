@@ -19,4 +19,14 @@ export class SkillsComponent implements OnInit{
     })
   }
 
+  changeDirection(index: number) :string{
+    console.log(index);
+    if(index % 2 == 0){
+      return 'justify-left';
+    }else{
+      return 'justify-end';
+    }
+  }
+
+
 }

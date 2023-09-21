@@ -1,10 +1,24 @@
-<section class="flex justify-center p-4" *ngFor="let skill of skills">
-    <div class="flex flex-col p-2">
-        <img class="h-32" src="/assets/img/logo2.png" alt="Seloco jao">
-        <p class="">{{ skill.name }}</p>
+<section class="p-12" *ngFor="let skill of skills; let i = index">
+    <div class="flex p-5 justify-start bg-slate-500/20 rounded-3xl" *ngIf="i%2===0; else rightOrientedTemplate">
+        <div class="flex flex-col p-4">
+            <img class="max-h-48 my-auto" src="{{ skill.skillImgUrl }}" alt="Seloco jao">
+        </div>
+        <div class="flex flex-col p-4 justify-center">
+            <p class="text-2xl mb-4"><strong>{{ skill.name }}</strong></p>
+            <p class="">{{ skill.description }}</p>
+            <p class="pt-10">Nível: {{ skill.level }}</p>
+        </div>
     </div>
-    <div class="flex flex-col p-4">
-        <p class="">{{ skill.description }}</p>
-        <p class="pt-10">Nível: {{ skill.level }}</p>
-    </div>
+    <ng-template #rightOrientedTemplate>
+        <div class="flex p-5 justify-end bg-slate-500/20 rounded-3xl">
+            <div class="flex flex-col p-4">
+                <p class="text-2xl mb-4"><strong>{{ skill.name }}</strong></p>
+                <p class="">{{ skill.description }}</p>
+                <p class="pt-10">Nível: {{ skill.level }}</p>
+            </div>
+            <div class="flex flex-col">
+                <img class="max-h-48 my-auto" src="{{ skill.skillImgUrl }}"alt="Seloco jao">
+            </div>
+        </div>
+    </ng-template>
 </section>

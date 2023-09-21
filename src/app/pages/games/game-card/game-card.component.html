@@ -1,9 +1,9 @@
-<section class="flex justify-center p-4" *ngFor="let game of games">
+<section class="flex p-4 my-8 bg-slate-500/20 rounded-3xl" *ngFor="let game of games">
     <div class="flex">
-        <img class="h-24 my-auto" src="{{ game.gameImgUrl }}" alt="Seloco jao">
+        <img class="h-24 my-auto rounded-lg" src="{{ game.gameImgUrl }}" alt="Seloco jao">
     </div>
-    <div class="flex flex-col px-4">
-        <p>Nome: <a routerLink="/games/{{ game.id }}"> {{ game.title}} </a></p>
+    <div class="flex flex-col mx-auto text-start justify-center">
+        <p class="">Nome: <a class="font-semibold hover:underline"routerLink="/games/{{ game.id }}"> {{ game.title}} </a></p>
         <p>Gênero: {{ game.gameGenre }}</p>
         <p>Avaliação: {{ game.rating }}/5.0</p>
     </div>
