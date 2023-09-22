@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class ProfessionalInfoComponent {
 
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute) {}
+  goBack(): void {
+    // Verifica se a rota atual é realmente /games antes de navegar de volta
+    if (this.route.snapshot.routeConfig?.path === '/professional') {
+      this.router.navigate(['/']);
+    }else{
+      this.router.navigate(['/'])
+    }
+  }
 }

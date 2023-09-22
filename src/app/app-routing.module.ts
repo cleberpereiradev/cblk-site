@@ -6,6 +6,7 @@ import { GameComponent } from './pages/games/game/game.component';
 import { GameCardComponent } from './pages/games/game-card/game-card.component';
 import { GameListComponent } from './pages/games/game-list/game-list.component';
 import { ProfessionalInfoComponent } from './pages/professional/professional-info/professional-info.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'gamecard', component: GameCardComponent},
   {path: 'gamelist', component: GameListComponent},
   {path: 'professional', component: ProfessionalInfoComponent},
+  {path: 'about', component: AboutComponent},
 ];
 
 
